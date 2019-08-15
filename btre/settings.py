@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 from django.contrib.messages import constants as messages
+import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -161,4 +162,4 @@ MESSAGE_TAGS = {
 
 LOGIN_REDIRECT_URL = '/'
 
-
+django_heroku.settings(locals())
